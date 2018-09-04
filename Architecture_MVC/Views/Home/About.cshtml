@@ -1,0 +1,44 @@
+﻿@model List<Architecture_MVC.Models.Pelicula>
+
+@{
+    ViewBag.Title = "About";
+    ViewBag.Test = "View Test";
+}
+@*<h2>@ViewBag.Title.</h2>
+    <h3>@ViewBag.Message</h3>
+
+    <p>Use this area to provide additional information.</p>*@
+
+<h2>Ejemplo sin tabla</h2>
+<br />
+
+@foreach (var pelicula in @Model)
+{
+    <h4>@pelicula.titulo</h4>
+    <h5>Duración: @pelicula.duracion</h5>
+    <h5>Publicación: @pelicula.publicacion.ToString("yyyy-MM-dd")</h5>
+    <h5>Filmado en: @pelicula.pais</h5>
+    <br />
+}
+
+<h2>Ejemplo con tabla</h2>
+<br />
+
+<table class="table">
+    <tr>
+        <th>Titulo</th>
+        <th>Duración</th>
+        <th>Publicación</th>
+        <th>Pais</th>
+    </tr>
+
+    @foreach (var PelTable in Model)
+    {
+        <tr>
+            <td>@PelTable.titulo</td>
+            <td>@PelTable.duracion</td>
+            <td>@PelTable.publicacion.ToString("yyyy-MM-dd")</td>
+            <td>@PelTable.pais</td>
+        </tr>
+    }
+</table>
