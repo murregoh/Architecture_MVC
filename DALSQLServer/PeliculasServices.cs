@@ -1,10 +1,8 @@
-﻿using Architecture_MVC.Models;
+﻿using DALSQLServer.Models;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 
-namespace Architecture_MVC.Services
+namespace DALSQLServer
 {
     public class PeliculasServices
     {
